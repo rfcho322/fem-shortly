@@ -35,7 +35,7 @@ menuBtn.addEventListener('click', (event) => {
 });
 
 // SHORTEN LINK
-shortenLinkBtn.addEventListener('click', () => {
+shortenLinkBtn.addEventListener('touchstart', () => {
     const inputLink = shortenLinkInput.value;
     // CHECK IF THE INPUT IS EMPTY
     if (inputLink.trim() !== '') {
@@ -56,11 +56,15 @@ shortenLinkBtn.addEventListener('click', () => {
 
                 // DO YOUR CODE HERE FOR LOCALSTORAGE SAVING
                 const shortenedLinks = JSON.parse(localStorage.getItem('shortenedLinks')) || [];
-                shortenedLinks.push({
+                // ADD NEW LINK TO THE BEGINNING OF THE ARRAY
+                shortenedLinks.unshift({
                     id: Date.now(),
                     original_link: originalUrl,
                     shortened_link: shortenedUrl
                 });
+
+                shortenedLinks.splice(4);
+
                 localStorage.setItem("shortenedLinks", JSON.stringify(shortenedLinks));
                 getShortenedLink();
 
