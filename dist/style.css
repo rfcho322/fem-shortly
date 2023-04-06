@@ -351,7 +351,7 @@ h1, h2, h3, h4, h5 {
     width: 100%;
   }
   .hero__image-container--img {
-    max-width: 100%;
+    width: 100%;
     overflow: auto;
     margin-inline: auto;
     padding-inline: 20px;
