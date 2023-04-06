@@ -1,0 +1,22 @@
+p {
+  font-size: 1em; // 18px
+}
+
+h5 {
+  font-size: 1.25em; // 1 * 1.25
+}
+h4 {
+  font-size: 1.563em; // 1.25 * 1.25
+}
+h3 {
+  font-size: 1.953em; // 1.563 * 1.25
+}
+h2 {
+  font-size: 2.441em; // 1.953 * 1.25
+}
+h1 {
+  font-size: 3.052em; // 2.441em * 1.25
+}
+h1, h2, h3, h4, h5 {
+  line-height: 1.2;
+}

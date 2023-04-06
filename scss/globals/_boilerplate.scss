@@ -1,0 +1,47 @@
+@use '../util';
+@use 'colors' as *;
+
+*, *::before, *::after {
+    box-sizing: border-box;
+}
+* {
+    margin: 0;
+}
+html, body {
+    height: 100%;
+}
+body {
+    line-height: 1.5;
+    -webkit-font-smoothing: antialiased;
+    font-family: util.$font;
+    font-size: 18px;
+    background-color: $clr-neutral-100;
+}
+img, picture, video, canvas, svg {
+    display: block;
+    max-width: 100%;
+}
+ul[role='list'],
+ol[role='list'] {
+  list-style: none;
+  padding-left: 0;
+}
+a,
+a:visited,
+a:active {
+  text-decoration: none;
+}
+input, button, textarea, select {
+font: inherit;
+}
+button {
+    cursor: pointer;
+    border: 0;
+    outline: 0;
+}
+p, h1, h2, h3, h4, h5, h6 {
+    overflow-wrap: break-word;
+}
+#root, #__next {
+    isolation: isolate;
+}

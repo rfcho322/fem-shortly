@@ -1,0 +1,128 @@
+@use '../globals/colors' as *;
+@use 'sass:color';
+
+.primary-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+    padding-block: 30px 20px;
+    padding-inline: 20px;
+
+    @media (min-width: 1024px) {
+        gap: 3rem;
+        padding-inline: 150px;
+    }
+
+    &__brand-logo {
+        width: 160px;
+        fill: $clr-neutral-very-dark-violet;
+    }
+
+    &__menu-list {  
+        width: 350px;
+        display: none;
+        flex-direction: column;
+        position: absolute;
+        top: 5rem;
+        left: 50%;
+        transform: translateX(-50%);
+        padding: 40px 30px;
+        border-radius: 10px;
+        text-align: center;
+        z-index: 1;
+        background-color: $clr-primary-dark-violet;
+
+        @media (min-width: 1024px) {
+            width: 100%;
+            display: flex;
+            justify-content: space-between;
+            flex-direction: row;
+            position: static;
+            top: auto;
+            left: auto;
+            transform: none;
+            padding: 0;
+            background-color: transparent;
+        }
+
+        &--nav-list {
+            li {
+                margin-bottom: 30px;
+                a {
+                    color: $clr-neutral-100;
+                }
+            }
+            @media (min-width: 1024px) {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                gap: 2rem;
+                li {
+                    margin-bottom: 0;
+                    a {
+                        color: $clr-neutral-grayish-violet;
+                    }
+                    a:hover {
+                        color: $clr-neutral-very-dark-violet;
+                    }
+                }
+            }
+        }
+
+        &--nav-action {
+            padding-top: 30px;
+            border-top: 1px solid hsla(0, 0%, 50%, 0.671);
+            button {
+                width: 100%;
+                font-weight: 500;
+                color: $clr-neutral-100;
+            }
+            :nth-child(1) {
+                background-color: transparent;
+                margin-bottom: 30px;
+            }
+            :nth-child(2) {
+                background-color: $clr-primary-cyan;
+                padding-block: 10px;
+                border-radius: 30px;
+            }
+            :nth-child(2):hover {
+                background-color: color.scale($clr-primary-cyan, $lightness: 30%);
+            }
+            @media (min-width: 1024px) {
+                padding-top: 0;
+                border-top: none;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                button {
+                    width: 120px;
+                    font-weight: 500;
+                    color: $clr-neutral-100;
+                }
+                :nth-child(1) {
+                    padding-block: 10px;
+                    color: $clr-neutral-grayish-violet;
+                    margin-bottom: 0;
+                }
+                :nth-child(1):hover {
+                    color: $clr-neutral-very-dark-violet;
+                }
+            }
+        }
+    }
+
+    &__menu-list.open {
+        display: flex;
+    }
+
+    &__menu-btn {
+        background-color: transparent;
+        color: $clr-neutral-grayish-violet;
+
+        @media (min-width: 1024px) {
+            display: none;
+        }
+    }
+}

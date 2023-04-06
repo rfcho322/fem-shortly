@@ -1,0 +1,85 @@
+@use '../globals/colors' as *;
+@use 'sass:color';
+
+.footer {
+    text-align: center;
+    padding-block: 60px 20px;
+    background-color: $clr-neutral-very-dark-violet;
+
+    &__brand {
+        &--logo {
+            margin-inline: auto;
+            fill: $clr-neutral-100;
+        }
+    }
+
+    @media (min-width: 1024px) {
+        display: flex;
+        justify-content: space-around;
+        flex-wrap: wrap;
+        gap: 5rem;
+    }
+    
+    &__nav {
+        margin-top: 50px;
+
+        &--item {
+            margin-bottom: 40px;
+        }
+        &--header {
+            margin-bottom: 20px;
+            color: $clr-neutral-100;
+            font-weight: 700;
+        }
+        &--link {
+            color: $clr-neutral-grayish-violet;
+            line-height: 2;
+        }
+        &--link:hover {
+            color: $clr-primary-cyan
+        }
+
+        @media (min-width: 1024px) {
+            display: flex;
+            gap: 5rem;
+            text-align: left;
+            margin-top: 0;
+
+            &--item {
+                margin-bottom: 0;
+            }
+        }
+    }
+
+    &__socials {
+        .social-list {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 1.75rem;
+        }
+
+        .social-icon {
+            color: $clr-neutral-100;
+            font-size: 1.75em;
+            margin-bottom: 20px;
+        }
+
+        .social-icon:hover {
+            color: $clr-primary-cyan;
+        }
+    }
+
+    &__author {
+        color: $clr-neutral-gray;
+        font-size: 0.9em;
+        flex-basis: 100%;
+
+        .author-link {
+            color: $clr-primary-cyan;
+        }
+        .author-link:hover {
+            color: color.scale($clr-primary-cyan, $lightness: 30%);
+        }
+    }
+}
