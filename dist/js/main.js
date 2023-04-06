@@ -64,8 +64,8 @@ shortenLinkBtn.addEventListener('click', () => {
                 localStorage.setItem("shortenedLinks", JSON.stringify(shortenedLinks));
                 getShortenedLink();
 
-                console.log(`Original URL: ${originalUrl}`);
-                console.log(`Shortened URL: ${shortenedUrl}`);
+                // console.log(`Original URL: ${originalUrl}`);
+                // console.log(`Shortened URL: ${shortenedUrl}`);
             } else {
                 console.log(`Error: ${data.error_code} : ${data.error}`);
                 shortenLinkInput.classList.add('error');
@@ -127,12 +127,12 @@ function getShortenedLink () {
         const newShortenedLink = document.createElement('div');
         newShortenedLink.className = 'card shorten-link-list';
         newShortenedLink.innerHTML = `<div class="card__header">
-                                            <p class="shorten-link | text-dark">${links.original_link}</p>
-                                        </div>
-                                        <div class="card__body">
-                                            <p class="shorten-link-preview | text-primary mb-1">${links.shortened_link}</p>
-                                            <button type="button" class="copy-link-btn | btn btn--primary">Copy</button>
-                                        </div>`;
+                                        <p class="shorten-link | text-dark">${links.original_link}</p>
+                                      </div>
+                                      <div class="card__body">
+                                        <p class="shorten-link-preview | text-primary mb-1">${links.shortened_link}</p>
+                                        <button type="button" class="copy-link-btn | btn btn--primary">Copy</button>
+                                      </div>`;
         newLinkList.appendChild(newShortenedLink);
     });
 
@@ -142,7 +142,7 @@ function getShortenedLink () {
     const shortenLinkPreview = document.querySelectorAll('.shorten-link-preview');
     copyLinkBtn.forEach((copyLinkBtn, value) => {
         copyLinkBtn.addEventListener('click', () => {
-        console.log(shortenLink[value].textContent + ' ' + shortenLinkPreview[value].textContent);
+        // console.log(shortenLink[value].textContent + ' ' + shortenLinkPreview[value].textContent);
 
         // COPY TO CLIPBOARD
         navigator.clipboard.writeText(shortenLinkPreview[value].textContent)

@@ -9,7 +9,7 @@
     padding-block: 30px 20px;
     padding-inline: 20px;
 
-    @media (min-width: 1024px) {
+    @include bp.breakpoint (desktop) {
         gap: 3rem;
         padding-inline: 150px;
     }
@@ -33,7 +33,7 @@
         z-index: 1;
         background-color: $clr-primary-dark-violet;
 
-        @media (min-width: 1024px) {
+        @include bp.breakpoint (desktop) {
             width: 100%;
             display: flex;
             justify-content: space-between;
@@ -53,7 +53,7 @@
                     color: $clr-neutral-100;
                 }
             }
-            @media (min-width: 1024px) {
+            @include bp.breakpoint (desktop) {
                 display: flex;
                 justify-content: center;
                 align-items: center;
@@ -90,7 +90,7 @@
             :nth-child(2):hover {
                 background-color: color.scale($clr-primary-cyan, $lightness: 30%);
             }
-            @media (min-width: 1024px) {
+            @include bp.breakpoint (desktop) {
                 padding-top: 0;
                 border-top: none;
                 display: flex;
@@ -121,7 +121,7 @@
         background-color: transparent;
         color: $clr-neutral-grayish-violet;
 
-        @media (min-width: 1024px) {
+        @include bp.breakpoint (desktop) {
             display: none;
         }
     }

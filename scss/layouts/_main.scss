@@ -1,5 +1,6 @@
 @use '../globals/colors' as *;
 @use 'sass:color';
+@use '../util/breakpoints' as bp;
 
 .main {
     background-color: $clr-neutral-200;
@@ -11,7 +12,7 @@
     padding-top: 50px;
     padding-bottom: 150px;
 
-    @media (min-width: 1024px) {
+    @include bp.breakpoint (desktop) {
         display: grid;
         grid-template-columns: 1fr 1fr;
         gap: 5rem;
@@ -30,7 +31,7 @@
             margin-left: 20px;
         }
 
-        @media (min-width: 376px) {
+        @include bp.breakpoint (mobile) {
             width: 100%;
 
             &--img {
@@ -40,7 +41,7 @@
             }
         }
 
-        @media (min-width: 1024px) {
+        @include bp.breakpoint (desktop) {
             width: auto;
             grid-column: 2 / 3;
             grid-row: 1 / 3;
@@ -62,6 +63,7 @@
             font-weight: 700;
             color: $clr-neutral-very-dark-violet;
             margin-bottom: 30px;
+            margin-inline: 20px;
         }
     
         &--text {
@@ -70,9 +72,10 @@
             padding-inline: 20px;
         }
 
-        @media (min-width: 1024px) {
+        @include bp.breakpoint (desktop) {
             &--header {
                 font-size: 5rem;
+                margin-inline: 0;
             }
             &--text {
                 padding-inline: 0;
@@ -85,7 +88,7 @@
     position: relative;
     padding-inline: 20px;
 
-    @media (min-width: 1024px) {
+    @include bp.breakpoint (desktop) {
         padding-inline: 150px;
     }
 
@@ -144,7 +147,7 @@
                 font-size: 0.85rem;
             }
 
-            @media (min-width: 1024px) {
+            @include bp.breakpoint (desktop) {
                 flex-wrap: nowrap;
                 align-items: center;
                 gap: 2rem;
@@ -225,7 +228,7 @@
             padding-bottom: 40px;
         }
 
-        @media (min-width: 1024px) {
+        @include bp.breakpoint (desktop) {
             &--image {
                 left: 0;
                 transform: none;
@@ -268,7 +271,7 @@
         left: 50%;
         transform: translateX(-50%);
 
-        @media (min-width: 1024px) {
+        @include bp.breakpoint (desktop) {
             width: 100%;
             height: 10px;
             top: 50%;
@@ -277,7 +280,7 @@
         }
     }
 
-    @media (min-width: 1024px) {
+    @include bp.breakpoint (desktop) {
         &__header--title {
             font-size: 1.953em;
         }
@@ -310,7 +313,7 @@
         color: $clr-neutral-100;
     }
 
-    @media (min-width: 1024px) {
+    @include bp.breakpoint (desktop) {
         background-image: url('../images/bg-boost-desktop.svg');
 
         &__header {

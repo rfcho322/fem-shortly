@@ -13,7 +13,7 @@
         }
     }
 
-    @media (min-width: 1024px) {
+    @include bp.breakpoint (desktop) {
         display: flex;
         justify-content: space-around;
         flex-wrap: wrap;
@@ -39,7 +39,7 @@
             color: $clr-primary-cyan
         }
 
-        @media (min-width: 1024px) {
+        @include bp.breakpoint (desktop) {
             display: flex;
             gap: 5rem;
             text-align: left;
