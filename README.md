@@ -90,6 +90,7 @@ Here is how I implemented a responsive pipeline like connector for my card featu
 ### Useful resources
 
 - [Clipboard API](https://developer.mozilla.org/en-US/docs/Web/API/Navigator/clipboard) - I use Clipboard API to implement copy features within my my web application.
+- [shrtcode API](https://shrtco.de/docs) - I use shrtcode API to shorten link.
 
 ## Author
 
