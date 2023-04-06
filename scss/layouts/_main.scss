@@ -31,15 +31,16 @@
             margin-left: 20px;
         }
 
-        // @include bp.breakpoint (mobile) {
-        //     width: 100%;
+        @include bp.breakpoint (mobile) {
+            width: 100%;
 
-        //     &--img {
-        //         width: auto;
-        //         overflow: auto;
-        //         margin-inline: auto;
-        //     }
-        // }
+            &--img {
+                max-width: 100%;
+                overflow: auto;
+                margin-inline: auto;
+                padding-inline: 20px;
+            }
+        }
 
         @include bp.breakpoint (desktop) {
             width: auto;
