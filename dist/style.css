@@ -199,7 +199,7 @@ h1, h2, h3, h4, h5 {
   padding-block: 30px 20px;
   padding-inline: 20px;
 }
-@media (min-width: 1024px) {
+@media (min-width: 64em) {
   .primary-header {
     gap: 3rem;
     padding-inline: 150px;
@@ -223,7 +223,7 @@ h1, h2, h3, h4, h5 {
   z-index: 1;
   background-color: hsl(257, 27%, 26%);
 }
-@media (min-width: 1024px) {
+@media (min-width: 64em) {
   .primary-header__menu-list {
     width: 100%;
     display: flex;
@@ -243,7 +243,7 @@ h1, h2, h3, h4, h5 {
 .primary-header__menu-list--nav-list li a {
   color: hsl(0, 0%, 100%);
 }
-@media (min-width: 1024px) {
+@media (min-width: 64em) {
   .primary-header__menu-list--nav-list {
     display: flex;
     justify-content: center;
@@ -281,7 +281,7 @@ h1, h2, h3, h4, h5 {
 .primary-header__menu-list--nav-action :nth-child(2):hover {
   background-color: #68e0e0;
 }
-@media (min-width: 1024px) {
+@media (min-width: 64em) {
   .primary-header__menu-list--nav-action {
     padding-top: 0;
     border-top: none;
@@ -310,7 +310,7 @@ h1, h2, h3, h4, h5 {
   background-color: transparent;
   color: hsl(257, 7%, 63%);
 }
-@media (min-width: 1024px) {
+@media (min-width: 64em) {
   .primary-header__menu-btn {
     display: none;
   }
@@ -624,7 +624,7 @@ h1, h2, h3, h4, h5 {
   margin-inline: auto;
   fill: hsl(0, 0%, 100%);
 }
-@media (min-width: 1024px) {
+@media (min-width: 64em) {
   .footer {
     display: flex;
     justify-content: space-around;
@@ -650,7 +650,7 @@ h1, h2, h3, h4, h5 {
 .footer__nav--link:hover {
   color: hsl(180, 66%, 49%);
 }
-@media (min-width: 1024px) {
+@media (min-width: 64em) {
   .footer__nav {
     display: flex;
     gap: 5rem;

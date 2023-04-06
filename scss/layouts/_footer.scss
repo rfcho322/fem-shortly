@@ -1,5 +1,6 @@
 @use '../globals/colors' as *;
 @use 'sass:color';
+@use '../util/breakpoints' as bp;
 
 .footer {
     text-align: center;
