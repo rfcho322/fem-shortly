@@ -346,16 +346,6 @@ h1, h2, h3, h4, h5 {
   max-width: 500px;
   margin-left: 20px;
 }
-@media (min-width: 23.5em) {
-  .hero__image-container {
-    width: 100%;
-  }
-  .hero__image-container--img {
-    width: auto;
-    overflow: auto;
-    margin-inline: auto;
-  }
-}
 @media (min-width: 64em) {
   .hero__image-container {
     width: auto;
