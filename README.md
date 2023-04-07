@@ -25,7 +25,7 @@ Users should be able to:
 - &#9989; See a list of their shortened links, even after refreshing the browser
 - &#9989; Copy the shortened link to their clipboard in a single click
 - &#9989; Receive an error message when the `form` is submitted if:
-- &#9989; The `input` field is empty
+  The `input` field is empty
 
 ### Screenshot
 
